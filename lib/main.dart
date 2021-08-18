@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'calculation.dart';
 import 'car.dart';
-
+import 'mec.dart';
 
 void main() {
 //  numbers.forEach((number) {
@@ -11,33 +11,28 @@ void main() {
 //  stringNumbers.forEach((str) {
 //    print(str);
 //  });
-//  var myCar = Car(
-//    name:'Mercedes G63',
-//    year: 2020,
-//  );
-//  myCar.doSomething();
-//  myCar.sayHello(personName: 'Tri');
-//  var totalNumber = totalNumbers(7, 9);
+  var myCar = Merc(
+    name:'Mercedes G63',
+    year: 2020,
+    color: 'Blue'
+  );
+  myCar.showInfo();
 
-  List<Car> cars = <Car>[
-    Car(name:'Mercedes - G63',year: 2020),
-    Car(name:'Mercedes - AMG',year: 2020),
-    Car(name:'Mercedes - C200',year: 2021),
-    Car(name:'Mercedes - C500',year: 2020),
-    Car(name:'Audi',year: 2021),
-    Car(name:'Lambogrini',year: 2019)
+  List<Merc> mers = <Merc>[
+    Merc(name:'G63',year: 2020,color: 'black'),
+    Merc(name:'AMG',year: 2020,color: 'black'),
+    Merc(name:'C200',year: 2021,color: 'black'),
+    Merc(name:'C500',year: 2020,color: 'yewllow'),
   ];
 
-  //cars.sort((a,b)=>a.name!.compareTo(b.name!));
- //cars.sort((a,b)=>a.year!-b.year!);
+  mers.sort((a,b)=>a.name!.compareTo(b.name!));
+  //mers.sort((a,b)=>a.year!-b.year!);
+
   //Update item
-
-  cars.add(Car(name:'Royal',year: 2020));
-  //var filterCar = cars.where((car)=>car.year == 2020 && car.name!.contains("Mercedes")).toList();
-
+  //var filterCar = mers.where((car)=>car.year == 2020 && car.name!.contains("Mercedes")).toList();
   runApp (
     Center(child: Text(
-      cars.toString(),
+      mers.toString(),
       style: TextStyle(fontSize: 20),
       textDirection: TextDirection.ltr,
     )),
