@@ -20,9 +20,13 @@ class Merc extends Car {
     return '\n ${this.name} - ${this.year} - ${this.color}';
   }
   @override
-  void showInfo() {
+  showInfo() {
     // TODO: implement showInfo
     print('=>>>> function show info in class Merc');
   }
+  @override
+  totalNumber(dynamic a, dynamic b, dynamic c) => a + b +c;
+
+
 
 }

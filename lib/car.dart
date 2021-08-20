@@ -15,6 +15,7 @@ abstract class Car {
     this.year
 });
 
-  void showInfo();
+  showInfo();
+  totalNumber(dynamic a, dynamic b, dynamic c);
 
 }
