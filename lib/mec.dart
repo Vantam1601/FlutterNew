@@ -1,9 +1,9 @@
 import 'package:flutter_app/car.dart';
 
-/**
- * Kế thừa trong dart
- * - truyền giá trị thông qua super(key:value)
- * - truyền đúng kiểu dữ liệu được kế thừa
+/*
+  Kế thừa trong dart
+  - truyền giá trị thông qua super(key:value)
+  - truyền đúng kiểu dữ liệu được kế thừa
  */
 
 class Merc extends Car {
