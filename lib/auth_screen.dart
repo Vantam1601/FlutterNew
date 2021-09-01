@@ -114,7 +114,7 @@ class _AuthScreenState extends State<AuthScreen>
                         : _size.width * 0.06,
                     child: SocialButton(),
                   ),
-                  // Login Text
+                  // Login widget
                   AnimatedPositioned(
                     duration: defaultDuration,
                     bottom:
@@ -151,7 +151,7 @@ class _AuthScreenState extends State<AuthScreen>
                       ),
                     ),
                   ),
-                  // Sign Up
+                  // Sign Up widget
                   AnimatedPositioned(
                     duration: defaultDuration,
                     bottom:
