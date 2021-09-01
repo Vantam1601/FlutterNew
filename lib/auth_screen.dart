@@ -95,11 +95,11 @@ class _AuthScreenState extends State<AuthScreen>
                         duration: defaultDuration,
                         child: _isShowSignUp
                             ? SvgPicture.asset(
-                                "assets/images/animation_logo.svg",
+                                logo_svg,
                                 color: signup_bg,
                               )
                             : SvgPicture.asset(
-                                "assets/images/animation_logo.svg",
+                                logo_svg,
                                 color: login_bg,
                               ),
                       ),

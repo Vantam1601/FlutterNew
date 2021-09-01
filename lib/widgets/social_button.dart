@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/constants.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({Key? key}) : super(key: key);
@@ -8,11 +9,9 @@ class SocialButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(onPressed: () {}, icon: Image.asset("assets/images/fb.png")),
-        IconButton(
-            onPressed: () {}, icon: Image.asset("assets/images/linkedin.png")),
-        IconButton(
-            onPressed: () {}, icon: Image.asset("assets/images/twitter.png")),
+        IconButton(onPressed: () {}, icon: Image.asset(fb_icon)),
+        IconButton(onPressed: () {}, icon: Image.asset(linkedin_icon)),
+        IconButton(onPressed: () {}, icon: Image.asset(twitter_icon)),
       ],
     );
   }
