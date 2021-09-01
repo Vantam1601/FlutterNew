@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
+import 'auth_screen.dart';
+import 'constants.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    var title = 'Web Images';
-
     return MaterialApp(
-        title: title,
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text(title),
-            ),
-            body: Center(
-              child: Image(
-                image: AssetImage('assets/images/i2.jpg'),
-              ),
-            )));
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Animation Login',
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          inputDecorationTheme: InputDecorationTheme(
+            filled: true,
+            fillColor: Colors.white38,
+            border: InputBorder.none,
+            hintStyle: TextStyle(color: Colors.white),
+            contentPadding: EdgeInsets.symmetric(
+                vertical: defaultPadding * 1.2, horizontal: defaultPadding),
+          )),
+      home: AuthScreen(),
+    );
   }
 }
