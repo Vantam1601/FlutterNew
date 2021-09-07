@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/validations/validation_item.dart';
 
+/*
+  flutter form
+  savereferences
+  cơ chế build form
+  form kết hợp với provider
+  alear value form
+*/
 class SignUpValidation with ChangeNotifier {
   ValidationItem _email = ValidationItem(null, null);
   ValidationItem _password = ValidationItem(null, null);
   ValidationItem _confirmPassword = ValidationItem(null, null);
+  ValidationItem _dob = ValidationItem(null, null);
 
   ValidationItem get email => _email;
 
@@ -12,10 +20,10 @@ class SignUpValidation with ChangeNotifier {
 
   ValidationItem get confirmPassword => _confirmPassword;
 
+  ValidationItem get dateOfBirth => _dob;
+
   bool get isValid {
-    if (_email.value != null &&
-        _password.value != null &&
-        _confirmPassword != null) {
+    if (_email.value != null && _password.value != null) {
       return true;
     } else {
       return false;
@@ -44,15 +52,26 @@ class SignUpValidation with ChangeNotifier {
   }
 
   void changeConfirmPassword(String value) {
-    if (value.length >= 3) {
+    if (value.length >= 3 && value == _password.value) {
       _confirmPassword = ValidationItem(value, null);
     } else {
-      _confirmPassword = ValidationItem(null, "Must be at least 3 characters");
+      _confirmPassword = ValidationItem(null, "Error");
+    }
+    notifyListeners();
+  }
+
+  void changeDateOfBirth(String value) {
+    try {
+      DateTime.parse(value);
+      _dob = ValidationItem(value, null);
+    } catch (error) {
+      _dob = ValidationItem(value, "Invalid Format");
     }
     notifyListeners();
   }
 
   void submitData() {
-    print("Email: ${_email.value}, password: ${_password.value}, confirmPassword: ${_confirmPassword.value}");
+    print(
+        "Email: ${_email.value}, password: ${_password.value}, confirmPassword: ${_dob.value}");
   }
 }

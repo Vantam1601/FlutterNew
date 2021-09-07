@@ -1,139 +1,102 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'auth_screen.dart';
 import 'constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,fluu
+//       title: 'Flutter Animation Login',
+//       theme: ThemeData(
+//           primarySwatch: Colors.blue,
+//           inputDecorationTheme: InputDecorationTheme(
+//             filled: true,
+//             fillColor: Colors.white38,
+//             border: InputBorder.none,
+//             hintStyle: TextStyle(color: Colors.white),
+//             contentPadding: EdgeInsets.symmetric(
+//                 vertical: defaultPadding * 1.2, horizontal: defaultPadding),
+//           )),
+//       home: AuthScreen(),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Animation Login',
-      theme: ThemeData(
-          primarySwatch: Colors.blue,
-          inputDecorationTheme: InputDecorationTheme(
-            filled: true,
-            fillColor: Colors.white38,
-            border: InputBorder.none,
-            hintStyle: TextStyle(color: Colors.white),
-            contentPadding: EdgeInsets.symmetric(
-                vertical: defaultPadding * 1.2, horizontal: defaultPadding),
-          )),
-      home: AuthScreen(),
+      title: 'SharedPreferences Demo',
+      home: SharedPreferencesDemo(),
     );
   }
 }
 
-//void main(List<String> args) {
-//  runApp(
-//    ChangeNotifierProvider(
-//      create: (context) => MySettings(),
-//      child: MaterialApp(
-//        debugShowCheckedModeBanner: false,
-//        home: MyApp(),
-//      ),
-//    ),
-//  );
-//}
-//
-//class MySettings extends ChangeNotifier {
-//  String _text = 'Text';
-//  Color _color = Colors.black;
-//
-//  /*
-//    Nếu không có notifyListeners thì giao diện sẽ không được cập nhật ngay.
-//    GetX ?
-//   */
-//  void changeText() {
-//    if (_text == 'Text') {
-//      _text = "change text when click button";
-//    } else {
-//      _text = "Text";
-//    }
-//    notifyListeners();
-//  }
-//
-//  set newColor(Color newColor) {
-//    _color = newColor;
-//    notifyListeners();
-//  }
-//
-//  void changeColor() {
-//    if(_color == Colors.black) {
-//      _color = Colors.blue;
-//    } else {
-//      _color = Colors.black;
-//    }
-//    notifyListeners();
-//  }
-//}
-//
-//class MyApp extends StatelessWidget {
-//  const MyApp({Key? key}) : super(key: key);
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Consumer<MySettings>(
-//      builder: (context, mySettings, child) {
-//        return Scaffold(
-//          appBar: AppBar(
-//            title: Text(
-//              "Provider Demo",
-//            ),
-//            backgroundColor: mySettings._color,
-//          ),
-//          drawer: Drawer(
-//            child: Center(
-//              child: Column(
-//                mainAxisAlignment: MainAxisAlignment.center,
-//                children: [
-//                  ElevatedButton(
-//                    onPressed: () {
-//                      mySettings.changeText();
-//                      Navigator.pop(context);
-//                    },
-//                    child: Text('Chang text'),
-//                  ),
-//                  ElevatedButton(
-//                    onPressed: () {
-//                      mySettings.changeColor();
-//                      Navigator.pop(context);
-//                    },
-//                    child: Text('Chang Color'),
-//                  ),
-//                  ElevatedButton(
-//                    onPressed: () {
-//                      mySettings.newColor = Colors.red;
-//                      Navigator.pop(context);
-//                    },
-//                    child: Text('Chang app red color'),
-//                  )
-//                ],
-//              ),
-//            ),
-//          ),
-//          body: Center(
-//            child: Row(
-//              mainAxisAlignment: MainAxisAlignment.spaceAround,
-//              children: [
-//                ElevatedButton(
-//                  onPressed: () {
-//                    mySettings.changeText();
-//                  },
-//                  child: Text("Click"),
-//                ),
-//                Text(
-//                  "${mySettings._text}",
-//                ),
-//              ],
-//            ),
-//          ),
-//        );
-//      },
-//    );
-//  }
-//}
+class SharedPreferencesDemo extends StatefulWidget {
+  SharedPreferencesDemo({Key? key}) : super(key: key);
+
+  @override
+  SharedPreferencesDemoState createState() => SharedPreferencesDemoState();
+}
+
+class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
+  Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  late Future<int> _counter;
+
+  Future<void> _incrementCounter() async {
+    final SharedPreferences prefs = await _prefs;
+    final int counter = (prefs.getInt('counter') ?? 0) + 1;
+
+    setState(() {
+      _counter = prefs.setInt("counter", counter).then((bool success) {
+        return counter;
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _counter = _prefs.then((SharedPreferences prefs) {
+      return (prefs.getInt('counter') ?? 0);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("SharedPreferences Demo"),
+      ),
+      body: Center(
+          child: FutureBuilder<int>(
+              future: _counter,
+              builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.waiting:
+                    return const CircularProgressIndicator();
+                  default:
+                    if (snapshot.hasError) {
+                      return Text('Error: ${snapshot.error}');
+                    } else {
+                      return Text(
+                        'Button tapped ${snapshot.data} time${snapshot.data == 1 ? '' : 's'}.\n\n'
+                        'This should persist across restarts.',
+                      );
+                    }
+                }
+              })),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}

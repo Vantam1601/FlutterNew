@@ -27,7 +27,6 @@ class SignUpForm extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: defaultPadding),
               child: TextFormField(
-                obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Password",
                   errorText: validationService.password.error,
@@ -37,14 +36,26 @@ class SignUpForm extends StatelessWidget {
                 },
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Confirm Password",
+                  errorText: validationService.confirmPassword.error,
+                ),
+                onChanged: (String value) {
+                  validationService.changeConfirmPassword(value);
+                },
+              ),
+            ),
             TextFormField(
-              obscureText: true,
+              keyboardType: TextInputType.datetime,
               decoration: InputDecoration(
-                hintText: "ConfirmPassword",
-                errorText: validationService.confirmPassword.error,
+                hintText: "yyyy-mm-dd",
+                errorText: validationService.dateOfBirth.error,
               ),
               onChanged: (String value) {
-                validationService.changeConfirmPassword(value);
+                validationService.changeDateOfBirth(value);
               },
             ),
             Spacer(
