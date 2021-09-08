@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-const Color login_bg = Color(0xFF00C470);
-const Color signup_bg = Color(0xFF000A54);
+const kPrimaryColor = Color(0xFFF1E6FF);
 
-const double defaultPadding = 16.0;
-const Duration defaultDuration = Duration(milliseconds: 300);
+const btColor = Color(0xFFF1E7FE);
 
-const String logo_svg = "assets/images/animation_logo.svg";
+const String login_bottom = "assets/images/login_bottom.png";
+const String main_bottom = "assets/images/main_bottom.png";
+const String main_top = "assets/images/main_top.png";
+const String sign_top = "assets/images/sign_top.png";
 
-const String fb_icon = "assets/images/fb.png";
-const String twitter_icon = "assets/images/twitter.png";
-const String linkedin_icon = "assets/images/linkedin.png";
+const String chat_svg = "assets/icons/chat.svg";
+const String facebook_svg = "assets/icons/facebook.svg";
