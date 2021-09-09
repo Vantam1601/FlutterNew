@@ -9,24 +9,62 @@ import 'package:flutter_app/validations/validation_item.dart';
   alear value form
 */
 class SignUpValidation with ChangeNotifier {
+  ValidationItem _fname = ValidationItem(null, null);
+  ValidationItem _lname = ValidationItem(null, null);
+  ValidationItem _username = ValidationItem(null, null);
+  ValidationItem _numphone = ValidationItem(null, null);
   ValidationItem _email = ValidationItem(null, null);
   ValidationItem _password = ValidationItem(null, null);
-  ValidationItem _confirmPassword = ValidationItem(null, null);
-  ValidationItem _dob = ValidationItem(null, null);
 
+  ValidationItem get firstName => _fname;
+  ValidationItem get lastName => _lname;
+  ValidationItem get userName => _username;
+  ValidationItem get numberPhone => _numphone;
   ValidationItem get email => _email;
-
   ValidationItem get password => _password;
 
-  ValidationItem get confirmPassword => _confirmPassword;
-
-  ValidationItem get dateOfBirth => _dob;
-
   bool get isValid {
-    if (_email.value != null && _password.value != null) {
-      return true;
-    } else {
+    if (_fname.value == null ||
+        _lname.value == null ||
+        _username.value == null ||
+        _numphone.value == null ||
+        _email.value == null ||
+        _password.value == null) {
       return false;
+    } else {
+      return true;
+    }
+  }
+
+  void changeFirstName(String value) {
+    if (value.isNotEmpty) {
+      _fname = ValidationItem(value, null);
+    } else {
+      _fname = ValidationItem(null, "First name not null");
+    }
+  }
+
+  void changeLastName(String value) {
+    if (value.isNotEmpty) {
+      _fname = ValidationItem(value, null);
+    } else {
+      _fname = ValidationItem(null, "Last name not null");
+    }
+  }
+
+  void changeUsertName(String value) {
+    if (value.isNotEmpty) {
+      _fname = ValidationItem(value, null);
+    } else {
+      _fname = ValidationItem(null, "User name not null");
+    }
+  }
+
+  void changeNumberPhone(String value) {
+    if (value.isNotEmpty && value.length == 10) {
+      _fname = ValidationItem(value, null);
+    } else {
+      _fname = ValidationItem(null, "Number Phone not null");
     }
   }
 
@@ -51,27 +89,8 @@ class SignUpValidation with ChangeNotifier {
     notifyListeners();
   }
 
-  void changeConfirmPassword(String value) {
-    if (value.length >= 3 && value == _password.value) {
-      _confirmPassword = ValidationItem(value, null);
-    } else {
-      _confirmPassword = ValidationItem(null, "Error");
-    }
-    notifyListeners();
-  }
-
-  void changeDateOfBirth(String value) {
-    try {
-      DateTime.parse(value);
-      _dob = ValidationItem(value, null);
-    } catch (error) {
-      _dob = ValidationItem(value, "Invalid Format");
-    }
-    notifyListeners();
-  }
-
   void submitData() {
     print(
-        "Email: ${_email.value}, password: ${_password.value}, confirmPassword: ${_dob.value}");
+        "FirstName: ${_fname.value},LastName: ${_lname.value},Email: ${_email.value}, password: ${_password.value}");
   }
 }
