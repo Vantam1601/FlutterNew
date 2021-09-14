@@ -1,49 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/round_alert_dialog.dart';
 import 'package:flutter_app/components/round_button.dart';
 import 'package:flutter_app/components/round_divider.dart';
 import 'package:flutter_app/components/round_password.dart';
 import 'package:flutter_app/components/round_social_button.dart';
 import 'package:flutter_app/components/round_textinput.dart';
 import 'package:flutter_app/constants.dart';
+import 'package:flutter_app/models/login.dart';
+import 'package:flutter_app/models/login_share_pref.dart';
 import 'package:flutter_app/screens/signup/signup_screen.dart';
 import 'package:flutter_app/validations/signin_validation.dart';
 import 'package:provider/provider.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({
     Key? key,
   }) : super(key: key);
 
-  void _showDialog(BuildContext context, String email, String password) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: new Text("Thông báo"),
-          content: Stack(
-            children: [
-              Text(email),
-              Text(password),
-            ],
-          ),
-          actions: <Widget>[
-            new TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text("OK"),
-            ),
-            new TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text("Canel"),
-            )
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  LoginSharedPref _loginSharedPref = LoginSharedPref();
+  LoginAuth loginSave = LoginAuth();
+  LoginAuth loginLoad = LoginAuth();
+
+  loadSharedPref() async {
+    try {
+      LoginAuth loginAuth =
+          LoginAuth.fromJson(await _loginSharedPref.read("loginAuth"));
+      Scaffold.of(context).showBottomSheet(
+        (context) => Column(
+          children: [
+            Text("Loaded"),
           ],
-        );
-      },
-    );
+        ),
+      );
+      setState(() {
+        loginLoad = loginAuth;
+      });
+    } catch (Excepetion) {
+      Scaffold.of(context).showBottomSheet((context) => Text("Nothing found!"));
+    }
   }
 
   @override
@@ -61,23 +59,28 @@ class Body extends StatelessWidget {
             errorText: _validationService.email.error,
             onChanged: (value) {
               _validationService.changeEmail(value);
+              setState(() {
+                loginSave.email = value;
+              });
             },
           ),
           RoundPaswordFiled(
             errorText: _validationService.password.error,
             onChanged: (value) {
               _validationService.changePassword(value);
+              setState(() {
+                loginSave.password = value;
+              });
             },
           ),
           RoundButton(
             text: "Sign In",
             press: () {
-              _showDialog(context, _validationService.email.toString(),
-                  _validationService.password.toString());
               _validationService.isValid
                   // ignore: unnecessary_statements
                   ? null
                   : _validationService.submitData();
+              _loginSharedPref.save("loginAuth", loginSave);
             },
             color: Colors.black87,
           ),
@@ -102,11 +105,22 @@ class Body extends StatelessWidget {
                 children: <Widget>[
                   SocialButton(
                     iconSrc: facebook_svg,
-                    press: () {},
+                    press: () {
+                      loadSharedPref();
+                    },
                   ),
                   SocialButton(
                     iconSrc: facebook_svg,
-                    press: () {},
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return SignUpScreen();
+                          },
+                        ),
+                      );
+                    },
                   ),
                   SocialButton(
                     iconSrc: facebook_svg,

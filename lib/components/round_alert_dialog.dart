@@ -1,42 +1,29 @@
 import 'package:flutter/material.dart';
 
-class MyAlertDialog extends StatelessWidget {
-  final String? email;
-  final String? password;
-  const MyAlertDialog({Key? key, this.email, this.password}) : super(key: key);
+class CustomDialog extends StatelessWidget {
+  final String? message;
+  final String? title;
+  final double padding = 16.0;
+  const CustomDialog({Key? key, this.message, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      content: Container(
-        alignment: Alignment.center,
-        height: 20,
-        width: 20,
-        child: Column(
-          children: [
-            Text(
-              email!,
-            ),
-            Text(
-              password!,
-            ),
-          ],
-        ),
+    return Dialog(
+      child: Column(
+        children: [
+          buildContent(),
+        ],
       ),
-      actions: <Widget>[
-        new TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: Text("OK"),
-        ),
-        new TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: Text("Canel"),
-        )
-      ],
+    );
+  }
+
+  Widget buildContent() {
+    return Container(
+      padding: EdgeInsets.all(padding),
+      alignment: Alignment.center,
+      child: Column(
+        children: [],
+      ),
     );
   }
 }
