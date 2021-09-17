@@ -3,15 +3,14 @@ class LoginAuth {
   String? password;
   LoginAuth({this.email, this.password});
 
-  factory LoginAuth.fromJson(Map<String, dynamic> jsonData) {
-    return LoginAuth(
-      email: jsonData['email'],
-      password: jsonData['password'],
-    );
+  LoginAuth.fromJson(Map<String, dynamic> json) {
+    email = json['email'];
+    password = json['password'];
   }
-  // chuyển dối tượng thành map
-  static Map<String, dynamic> toMap(LoginAuth loginAuth) => {
-        'email': loginAuth.email,
-        'password': loginAuth.password,
-      };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['email'] = this.email;
+    data['password'] = this.password;
+    return data;
+  }
 }

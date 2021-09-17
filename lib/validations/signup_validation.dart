@@ -24,15 +24,15 @@ class SignUpValidation with ChangeNotifier {
   ValidationItem get password => _password;
 
   bool get isValid {
-    if (_fname.value == null ||
-        _lname.value == null ||
-        _username.value == null ||
-        _numphone.value == null ||
-        _email.value == null ||
-        _password.value == null) {
-      return false;
-    } else {
+    if (_fname.value != null &&
+        _lname.value != null &&
+        _username.value != null &&
+        _numphone.value != null &&
+        _email.value != null &&
+        _password.value != null) {
       return true;
+    } else {
+      return false;
     }
   }
 
@@ -42,30 +42,34 @@ class SignUpValidation with ChangeNotifier {
     } else {
       _fname = ValidationItem(null, "First name not null");
     }
+    notifyListeners();
   }
 
   void changeLastName(String value) {
     if (value.isNotEmpty) {
-      _fname = ValidationItem(value, null);
+      _lname = ValidationItem(value, null);
     } else {
-      _fname = ValidationItem(null, "Last name not null");
+      _lname = ValidationItem(null, "Last name not null");
     }
+    notifyListeners();
   }
 
-  void changeUsertName(String value) {
+  void changeUserName(String value) {
     if (value.isNotEmpty) {
-      _fname = ValidationItem(value, null);
+      _email = ValidationItem(value, null);
     } else {
-      _fname = ValidationItem(null, "User name not null");
+      _email = ValidationItem(null, "User name not null");
     }
+    notifyListeners();
   }
 
   void changeNumberPhone(String value) {
     if (value.isNotEmpty && value.length == 10) {
-      _fname = ValidationItem(value, null);
+      _numphone = ValidationItem(value, null);
     } else {
-      _fname = ValidationItem(null, "Number Phone not null");
+      _numphone = ValidationItem(null, "Number Phone not null");
     }
+    notifyListeners();
   }
 
   void changeEmail(String value) {
@@ -91,6 +95,6 @@ class SignUpValidation with ChangeNotifier {
 
   void submitData() {
     print(
-        "FirstName: ${_fname.value},LastName: ${_lname.value},Email: ${_email.value}, password: ${_password.value}");
+        "FirstName: ${_fname.value},LastName: ${_lname.value},Number phone: ${_numphone.value},Email: ${_email.value}, password: ${_password.value}");
   }
 }

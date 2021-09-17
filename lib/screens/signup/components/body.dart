@@ -37,7 +37,7 @@ class Body extends StatelessWidget {
             hintText: "User name *",
             errorText: _validationService.userName.error,
             onChanged: (value) {
-              _validationService.changeUsertName(value);
+              _validationService.changeUserName(value);
             },
           ),
           RoundTextInput(
