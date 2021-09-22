@@ -35,6 +35,7 @@ dependencies:
   bloc: ^7.1.0
   shared_preferences: ^2.0.7
   formz: ^0.4.0
+  flutter_icons: ^1.1.0
 
 dev_dependencies:
   flutter_test:

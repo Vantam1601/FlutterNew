@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/round_button.dart';
+import 'package:flutter_app/widgets/round_button.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/screens/signin/signin_screen.dart';
 import 'package:flutter_app/screens/signup/signup_screen.dart';

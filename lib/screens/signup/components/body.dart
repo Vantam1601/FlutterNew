@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/components/round_button.dart';
-import 'package:flutter_app/components/round_divider.dart';
-import 'package:flutter_app/components/round_password.dart';
-import 'package:flutter_app/components/round_social_button.dart';
-import 'package:flutter_app/components/round_textinput.dart';
+import 'package:flutter_app/widgets/round_button.dart';
+import 'package:flutter_app/widgets/round_divider.dart';
+import 'package:flutter_app/widgets/round_password.dart';
+import 'package:flutter_app/widgets/round_social_button.dart';
+import 'package:flutter_app/widgets/round_textinput.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/validations/signup_validation.dart';
 import 'package:provider/provider.dart';
