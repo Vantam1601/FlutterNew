@@ -99,7 +99,7 @@ class _RootAppState extends State<RootApp> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+        padding: const EdgeInsets.only(left: 10, right: 15, top: 5),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

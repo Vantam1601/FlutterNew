@@ -75,7 +75,7 @@ class _AccountPageState extends State<AccountPage> {
                       ),
                       padding: const EdgeInsets.all(20),
                     ),
-                  )
+                  ),
                 ],
               ),
             ],
