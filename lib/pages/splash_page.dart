@@ -15,16 +15,37 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  Future<bool> isFirstTime() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    var isFirstTime = pref.getBool('first_time');
+    if (isFirstTime != null && !isFirstTime) {
+      pref.setBool('first_time', false);
+      return false;
+    } else {
+      pref.setBool('first_time', false);
+      return true;
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    Timer(
-      Duration(seconds: 2),
-      () => Navigator.pushReplacement(
-        this.context,
-        MaterialPageRoute(builder: (context) => RootApp()),
-      ),
-    );
+
+    Timer(Duration(seconds: 2), () {
+      isFirstTime().then((isFirstTime) {
+        isFirstTime
+            ? Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return IntroPage();
+                },
+              ))
+            : Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return RootApp();
+                },
+              ));
+      });
+    });
   }
 
   @override
