@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/intro_page.dart';
+import 'package:flutter_app/pages/intro/intro_page.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
 import 'package:flutter_app/utils/image_url.dart';
@@ -31,7 +31,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       isFirstTime().then((isFirstTime) {
         isFirstTime
             ? Navigator.push(context, MaterialPageRoute(
