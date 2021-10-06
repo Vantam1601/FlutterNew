@@ -1,45 +1,20 @@
 import 'package:flutter/material.dart';
-import 'calculation.dart';
-import 'car.dart';
 
 void main() {
-//  numbers.forEach((number) {
-//    print(number);
-//  });
+  runApp(MyApp());
+}
 
-//  stringNumbers.forEach((str) {
-//    print(str);
-//  });
-//  var myCar = Car(
-//    name:'Mercedes G63',
-//    year: 2020,
-//  );
-//  myCar.doSomething();
-//  myCar.sayHello(personName: 'Tri');
-//  var totalNumber = totalNumbers(7, 9);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  List<Car> cars = <Car>[
-    Car(name: 'Mercedes - G63', year: 2020),
-    Car(name: 'Mercedes - AMG', year: 2020),
-    Car(name: 'Mercedes - C200', year: 2021),
-    Car(name: 'Mercedes - C500', year: 2020),
-    Car(name: 'Audi', year: 2021),
-    Car(name: 'Lambogrini', year: 2019)
-  ];
-
-  //cars.sort((a,b)=>a.name!.compareTo(b.name!));
-  //cars.sort((a,b)=>a.year!-b.year!);
-  //Update item
-
-  cars.add(Car(name: 'Royal', year: 2020));
-  //var filterCar = cars.where((car)=>car.year == 2020 && car.name!.contains("Mercedes")).toList();
-
-  runApp(
-    Center(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Center(
         child: Text(
-      cars.toString(),
-      style: TextStyle(fontSize: 20),
-      textDirection: TextDirection.ltr,
-    )),
-  );
+          "Future Main",
+        ),
+      ),
+    );
+  }
 }
