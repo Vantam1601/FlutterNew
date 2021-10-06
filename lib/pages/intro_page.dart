@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intro_slider/slide_object.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key? key}) : super(key: key);
@@ -9,8 +8,6 @@ class IntroPage extends StatefulWidget {
 }
 
 class _IntroPageState extends State<IntroPage> {
-  List<Slide>? slides;
-
   @override
   void initState() {
     super.initState();
