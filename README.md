@@ -1,4 +1,4 @@
-# flutter_demo1
+# demoplashscreen
 
 A new Flutter project.
 
