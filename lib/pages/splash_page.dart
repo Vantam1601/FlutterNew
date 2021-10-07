@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/onboard/on_board.dart';
+import 'package:flutter_app/pages/onboard/onboard_page.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
 import 'package:flutter_app/utils/image_url.dart';
@@ -36,7 +37,7 @@ class _SplashPageState extends State<SplashPage> {
         isFirstTime
             ? Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return OnBoard();
+                  return OnBoardPage();
                 },
               ))
             : Navigator.push(context, MaterialPageRoute(
