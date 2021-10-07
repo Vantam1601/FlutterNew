@@ -4,6 +4,7 @@ import 'package:flutter_app/pages/onboard/widgets/onboard_content.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
 import 'package:flutter_app/utils/image_url.dart';
+import 'package:flutter_app/utils/size_config.dart';
 import 'package:flutter_app/widgets/button_style.dart';
 
 class Body extends StatefulWidget {
@@ -40,20 +41,21 @@ class _BodyState extends State<Body> {
       child: Column(
         children: <Widget>[
           Expanded(
-              flex: 3,
-              child: PageView.builder(
-                itemCount: getStartValue.length,
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                },
-                itemBuilder: (_, index) => OnBoardContent(
-                  title: getStartValue[index]["title"].toString(),
-                  desc: getStartValue[index]["desc"].toString(),
-                  image: getStartValue[index]["image"].toString(),
-                ),
-              )),
+            flex: 3,
+            child: PageView.builder(
+              itemCount: getStartValue.length,
+              onPageChanged: (value) {
+                setState(() {
+                  currentPage = value;
+                });
+              },
+              itemBuilder: (context, index) => OnBoardContent(
+                title: getStartValue[index]["title"],
+                desc: getStartValue[index]["desc"],
+                image: getStartValue[index]["image"],
+              ),
+            ),
+          ),
           Expanded(
             flex: 2,
             child: Column(

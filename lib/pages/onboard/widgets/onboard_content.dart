@@ -3,10 +3,6 @@ import 'package:flutter_app/themes/color.dart';
 import 'package:flutter_app/utils/size_config.dart';
 
 class OnBoardContent extends StatelessWidget {
-  final String? title;
-  final String? desc;
-  final String? image;
-
   const OnBoardContent({
     Key? key,
     this.title,
@@ -14,16 +10,18 @@ class OnBoardContent extends StatelessWidget {
     this.image,
   }) : super(key: key);
 
+  final String? title;
+  final String? desc;
+  final String? image;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Image.asset(
           image!,
-          height: getPropotionateScreenHeight(265),
-          width: getPropotionateScreenWidth(235),
         ),
-        Spacer(flex: 2),
+        SizedBox(height: 40),
         Text(
           title!,
           style: TextStyle(
@@ -33,7 +31,7 @@ class OnBoardContent extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-        Spacer(flex: 2),
+        SizedBox(height: 15),
         Text(
           desc!,
           style: TextStyle(
