@@ -43,3 +43,6 @@ const Color lineTextGrey = Color(0xff9E9E9E);
 const Color darkModeButton = Color(0xff2F3641);
 const Color lightModeButton = Color(0xff000000);
 const Color darkBgCircle = Color(0xff2F3641);
+
+const Color brown300 = Color(0xFF8D6E63);
+const Color brown = Color(0xFF795548);
