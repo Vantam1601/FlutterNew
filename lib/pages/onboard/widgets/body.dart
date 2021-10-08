@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/getstarted.dart';
 import 'package:flutter_app/pages/onboard/widgets/onboard_content.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
-import 'package:flutter_app/utils/image_url.dart';
-import 'package:flutter_app/utils/size_config.dart';
 import 'package:flutter_app/widgets/button_style.dart';
 
 class Body extends StatefulWidget {
@@ -16,24 +15,6 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   int currentPage = 0;
-
-  List<Map<String, String>> getStartValue = [
-    {
-      "title": "Shopping Smart",
-      "desc": "Welcome to OREO Store",
-      "image": getting_start_get_start_1,
-    },
-    {
-      "title": "Focus UX",
-      "desc": "Personalization of User Experience",
-      "image": getting_start_get_start_2,
-    },
-    {
-      "title": "Creative Concept",
-      "desc": "Duscovering new horizons",
-      "image": getting_start_get_start_3,
-    },
-  ];
 
   @override
   Widget build(BuildContext context) {

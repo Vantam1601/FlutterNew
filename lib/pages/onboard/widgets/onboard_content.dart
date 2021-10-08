@@ -20,8 +20,10 @@ class OnBoardContent extends StatelessWidget {
       children: <Widget>[
         Image.asset(
           image!,
+          height: 365,
+          width: 400,
         ),
-        SizedBox(height: 40),
+        Spacer(),
         Text(
           title!,
           style: TextStyle(
@@ -31,7 +33,9 @@ class OnBoardContent extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: 15),
+        Spacer(
+          flex: 2,
+        ),
         Text(
           desc!,
           style: TextStyle(
