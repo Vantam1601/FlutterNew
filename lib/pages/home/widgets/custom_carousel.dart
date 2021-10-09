@@ -24,110 +24,83 @@ class _CustomeCarouselHomePageState extends State<CustomeCarouselHomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Column(
-      children: <Widget>[
-        Container(
-          width: size.width,
-          child: CarouselSlider(
-            items: widget.items!.map((item) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Stack(
-                    children: <Widget>[
-                      Container(
-                        width: size.width,
-                        child: Image(
-                          image: NetworkImage(item),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 20,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: Row(
-                            children: [
-                              Column(
+      children: [
+        Stack(
+          children: <Widget>[
+            Container(
+              width: size.width,
+              child: CarouselSlider(
+                items: widget.items!.map((item) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Stack(
+                        children: <Widget>[
+                          Container(
+                            width: size.width,
+                            child: Image(
+                              image: NetworkImage(item),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 10,
+                            width: size.width,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 15),
+                              child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Sale",
+                                    "data - 1",
                                     style: TextStyle(
-                                      fontSize: 25,
+                                      fontSize: 24,
                                       fontWeight: FontWeight.bold,
-                                      color: goldenRod,
+                                      color: orange.withOpacity(0.8),
                                     ),
                                   ),
-                                  SizedBox(height: 20),
+                                  SizedBox(height: 10),
                                   Text(
-                                    "New Clothing",
+                                    "data - 2",
                                     style: TextStyle(
-                                      fontSize: 25,
+                                      fontSize: 28,
                                       fontWeight: FontWeight.bold,
                                       color: orange,
                                     ),
                                   ),
                                 ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                    ],
+                        ],
+                      );
+                    },
                   );
-                },
-              );
-            }).toList(),
-            options: CarouselOptions(
-              autoPlayCurve: Curves.fastLinearToSlowEaseIn,
-              autoPlayAnimationDuration: Duration(seconds: 2),
-              viewportFraction: 1.0,
-              onPageChanged: setActiveDot(activeIndex),
-              autoPlay: true,
+                }).toList(),
+                options: CarouselOptions(
+                  autoPlayCurve: Curves.fastLinearToSlowEaseIn,
+                  autoPlayAnimationDuration: Duration(seconds: 2),
+                  viewportFraction: 1.0,
+                  onPageChanged: setActiveDot(activeIndex),
+                  autoPlay: true,
+                ),
+              ),
             ),
-          ),
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
+        SizedBox(height: 20),
+        Positioned(
+          left: 0,
+          right: 0,
+          top: 0,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 10,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: List.generate(widget.items!.length, (idx) {
-                    return activeIndex == idx ? ActiveDot() : InactiveDot();
-                  }),
-                ),
-              ),
-              Positioned(
-                left: 0,
-                right: 0,
-                top: -200,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => ShopPage()),
-                    ),
-                    child: Icon(
-                      Icons.arrow_right_alt,
-                      color: white,
-                      size: 20,
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: CircleBorder(),
-                      padding: EdgeInsets.all(20),
-                      primary: black,
-                      onPrimary: grey.withOpacity(0.2),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: List.generate(
+              widget.items!.length,
+              (index) {
+                return activeIndex == index ? ActiveDot() : InactiveDot();
+              },
+            ),
           ),
         ),
       ],

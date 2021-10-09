@@ -364,3 +364,30 @@ List storeList = [
     "open": 1
   },
 ];
+
+List vendors = [
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1555529771-7888783a18d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "Zara",
+    "star": 5
+  },
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1555529771-7888783a18d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "Chanel",
+    "star": 5
+  },
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1555529771-7888783a18d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "Louis Vuitton",
+    "star": 5
+  },
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1555529771-7888783a18d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "Chanel",
+    "star": 3
+  },
+];
