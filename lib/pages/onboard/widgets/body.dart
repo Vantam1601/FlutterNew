@@ -41,6 +41,7 @@ class _BodyState extends State<Body> {
             flex: 2,
             child: Column(
               children: [
+                Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
