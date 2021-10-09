@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/constant.dart';
+import 'package:flutter_app/data/list_icon.dart';
 import 'package:flutter_app/pages/cart/cart_page.dart';
 import 'package:flutter_app/pages/home/home_page.dart';
 import 'package:flutter_app/pages/profile/profile_page.dart';
@@ -31,10 +31,30 @@ class _RootAppState extends State<RootApp> {
   PreferredSizeWidget? getAppBar() {
     switch (activeTab) {
       case 0:
-        appBar = null;
+        return AppBar(
+          elevation: 0.8,
+          backgroundColor: white,
+          title: Text(
+            "Home",
+            style: TextStyle(
+              color: black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        );
         break;
       case 1:
-        appBar = null;
+        return AppBar(
+          elevation: 0.8,
+          backgroundColor: white,
+          title: Text(
+            "Product",
+            style: TextStyle(
+              color: black,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        );
         break;
       case 2:
         return AppBar(

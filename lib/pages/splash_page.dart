@@ -5,6 +5,7 @@ import 'package:flutter_app/pages/onboard/on_board.dart';
 import 'package:flutter_app/pages/onboard/onboard_page.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
+import 'package:flutter_app/utils/strings.dart';
 import 'package:flutter_app/utils/image_url.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -18,12 +19,12 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   Future<bool> isFirstTime() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    var isFirstTime = pref.getBool('first_time');
+    var isFirstTime = pref.getBool(firstTime);
     if (isFirstTime != null && !isFirstTime) {
-      pref.setBool('first_time', false);
+      pref.setBool(firstTime, false);
       return false;
     } else {
-      pref.setBool('first_time', false);
+      pref.setBool(firstTime, false);
       return true;
     }
   }

@@ -106,8 +106,9 @@ class _OnBoardState extends State<OnBoard> {
                                 width: currentIndex == index ? 25 : 8,
                                 height: 8,
                                 decoration: BoxDecoration(
-                                  color:
-                                      currentIndex == index ? brown : brown300,
+                                  color: currentIndex == index
+                                      ? brown
+                                      : brown.withOpacity(0.88),
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                               ),

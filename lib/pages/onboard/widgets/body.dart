@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/getstarted.dart';
+import 'package:flutter_app/data/get_started.dart';
 import 'package:flutter_app/pages/onboard/widgets/onboard_content.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
