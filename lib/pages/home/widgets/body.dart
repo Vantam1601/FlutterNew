@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
 import 'package:flutter_app/pages/home/widgets/title_content.dart';
 import 'package:flutter_app/themes/color.dart';
+import 'package:flutter_app/widgets/cart_item.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -80,57 +81,10 @@ class _BodyState extends State<Body> {
             children: List.generate(vendors.length, (index) {
               return Padding(
                 padding: const EdgeInsets.only(left: 15),
-                child: Container(
-                  width: 120,
-                  height: 120,
-                  color: gray.withOpacity(0.2),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(8),
-                        width: 60,
-                        height: 60,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              image: NetworkImage(
-                                vendors[index]["imgUrl"],
-                              ),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        vendors[index]["name"],
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          color: black.withOpacity(0.8),
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            vendors[index]["star"].toString(),
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: grey.withOpacity(0.6),
-                            ),
-                          ),
-                          SizedBox(width: 10),
-                          Icon(
-                            Icons.star,
-                            size: 16,
-                            color: yellow,
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                child: CartItem(
+                  imgUrl: vendors[index]['imgUrl'],
+                  title: vendors[index]['name'],
+                  desc: vendors[index]['star'].toString(),
                 ),
               );
             }),

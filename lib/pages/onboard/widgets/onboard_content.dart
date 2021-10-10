@@ -17,10 +17,11 @@ class OnBoardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        Spacer(),
         Image.asset(
           image!,
-          height: 365,
-          width: 400,
+          height: 275,
+          width: 450,
         ),
         Spacer(),
         Text(
