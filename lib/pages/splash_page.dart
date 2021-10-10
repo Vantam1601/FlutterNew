@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/onboard/on_board.dart';
 import 'package:flutter_app/pages/onboard/onboard_page.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';

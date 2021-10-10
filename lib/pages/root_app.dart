@@ -42,7 +42,7 @@ class _RootAppState extends State<RootApp> {
             textAlign: TextAlign.center,
           ),
         );
-        break;
+
       case 1:
         return AppBar(
           elevation: 0.8,
@@ -55,7 +55,6 @@ class _RootAppState extends State<RootApp> {
             textAlign: TextAlign.center,
           ),
         );
-        break;
       case 2:
         return AppBar(
           elevation: 0.8,
@@ -68,7 +67,6 @@ class _RootAppState extends State<RootApp> {
             textAlign: TextAlign.center,
           ),
         );
-        break;
       case 3:
         return AppBar(
           elevation: 0.8,
@@ -81,7 +79,6 @@ class _RootAppState extends State<RootApp> {
             textAlign: TextAlign.center,
           ),
         );
-        break;
       case 4:
         return AppBar(
           elevation: 0.8,
@@ -94,7 +91,6 @@ class _RootAppState extends State<RootApp> {
             textAlign: TextAlign.center,
           ),
         );
-        break;
       default:
     }
   }

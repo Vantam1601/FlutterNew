@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/themes/color.dart';
-import 'package:flutter_app/utils/size_config.dart';
 
 class OnBoardContent extends StatelessWidget {
   const OnBoardContent({
