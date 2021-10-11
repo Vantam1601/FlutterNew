@@ -5,10 +5,12 @@ import 'package:flutter_app/themes/color.dart';
 class TitleContent extends StatelessWidget {
   final String? title;
   final String? textParam;
+  final Function()? functionPress;
   const TitleContent({
     Key? key,
     this.title,
     this.textParam,
+    this.functionPress,
   }) : super(key: key);
 
   @override
@@ -26,7 +28,7 @@ class TitleContent extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: functionPress!,
             hoverColor: white.withOpacity(0.6),
             child: Text(
               textParam!,

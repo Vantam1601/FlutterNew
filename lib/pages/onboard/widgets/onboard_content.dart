@@ -21,7 +21,7 @@ class OnBoardContent extends StatelessWidget {
         Image.asset(
           image!,
           height: 275,
-          width: 450,
+          width: MediaQuery.of(context).size.width,
         ),
         Spacer(),
         Text(
