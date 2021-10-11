@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/onboard/on_board_model.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
-import 'package:flutter_app/utils/image_url.dart';
+import 'package:flutter_app/resources/image_url.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/onboard/onboard_page.dart';
 import 'package:flutter_app/pages/root_app.dart';
 import 'package:flutter_app/themes/color.dart';
-import 'package:flutter_app/utils/strings.dart';
-import 'package:flutter_app/utils/image_url.dart';
+import 'package:flutter_app/resources/strings.dart';
+import 'package:flutter_app/resources/image_url.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashPage extends StatefulWidget {

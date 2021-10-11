@@ -1,4 +1,4 @@
-import 'package:flutter_app/utils/image_url.dart';
+import 'package:flutter_app/resources/image_url.dart';
 
 List<Map<String, String>> getStartValue = [
   {
