@@ -391,3 +391,27 @@ List vendors = [
     "star": 3
   },
 ];
+
+List blogList = [
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+    "title": "Test 1",
+    "author": "admin",
+    "dateCreate": "2 years ago",
+  },
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+    "title": "Test 2",
+    "author": "admin",
+    "dateCreate": "2 years ago",
+  },
+  {
+    "imgUrl":
+        "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+    "title": "Test 3",
+    "author": "admin",
+    "dateCreate": "2 years ago",
+  },
+];
