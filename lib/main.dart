@@ -1,9 +1,6 @@
 
-
-import 'package:demoplashscreen/intro_slider.dart';
+import 'package:demoplashscreen/pages/myapp.dart';
 import 'package:flutter/material.dart';
-//import 'splashscreen.dart';
-//ham main
 void main() {
   runApp(const MyApp());
 }
@@ -14,12 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //goi splash screen
-      home: IntroSliderPage(),
+      home: Mi_app(),
     );
   }
 }
-//class splash screen
 
 
 
