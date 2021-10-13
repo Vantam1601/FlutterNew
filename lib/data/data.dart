@@ -299,7 +299,7 @@ const List historySearches = [
 
 const List cartList = [
   {
-    "img":
+    "imgUrl":
         "https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     "name": "Snoopy T-shirt",
     "ref": "04559812",
@@ -307,7 +307,7 @@ const List cartList = [
     "size": "S"
   },
   {
-    "img":
+    "imgUrl":
         "https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     "name": "American",
     "ref": "04459811",
@@ -396,21 +396,21 @@ List blogList = [
   {
     "imgUrl":
         "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-    "title": "Test 1",
+    "title": "Vogue's Ultimate Fall Boot Guide Is Here a",
     "author": "admin",
     "dateCreate": "2 years ago",
   },
   {
     "imgUrl":
         "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-    "title": "Test 2",
+    "title": "Virgil Abloh's Latest Off-White",
     "author": "admin",
     "dateCreate": "2 years ago",
   },
   {
     "imgUrl":
         "https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
-    "title": "Test 3",
+    "title": "20 Reasons to Reconsider the Ballet Flat",
     "author": "admin",
     "dateCreate": "2 years ago",
   },

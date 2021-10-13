@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/home/widgets/banner_image.dart';
+import 'package:flutter_app/pages/home/widgets/list_arrival_item.dart';
 import 'package:flutter_app/pages/home/widgets/list_blog_item.dart';
 import 'package:flutter_app/pages/home/widgets/list_category_item.dart';
 import 'package:flutter_app/pages/home/widgets/list_seller_item.dart';
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
           ListVendorItems(),
           ListBestSellerItems(),
           BannerImage(),
+          ListNewArrivalItems(),
           ListBlogItems(),
         ],
       ),

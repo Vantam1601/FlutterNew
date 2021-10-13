@@ -32,20 +32,20 @@ class BannerImage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Winnoer",
+                    "20% Off Evething".toUpperCase(),
                     style: TextStyle(
-                      fontSize: 28,
+                      fontSize: 18,
                       fontWeight: FontWeight.w900,
-                      color: gray,
+                      color: white,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Text(
-                    "Salee",
+                    "Use code: OREO".toUpperCase(),
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 12,
                       fontWeight: FontWeight.w900,
-                      color: gray.withOpacity(0.9),
+                      color: white,
                       decoration: TextDecoration.underline,
                     ),
                   ),

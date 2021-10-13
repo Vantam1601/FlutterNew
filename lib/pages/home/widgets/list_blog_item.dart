@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
 import 'package:flutter_app/pages/home/widgets/title_content.dart';
 import 'package:flutter_app/themes/color.dart';
@@ -16,7 +17,7 @@ class _ListBlogItemsState extends State<ListBlogItems> {
     return Column(
       children: [
         TitleContent(
-          title: 'Blog',
+          title: 'Blogs',
           textParam: 'Show all',
           functionPress: () => print("List blog"),
         ),
@@ -44,35 +45,49 @@ class _ListBlogItemsState extends State<ListBlogItems> {
                     ),
                     SizedBox(width: 15),
                     Padding(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
+                      padding: const EdgeInsets.only(top: 5),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             blogList[index]['title'],
                             style: TextStyle(
                               color: black,
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
+                          Text(
+                            blogList[index]['dateCreate'],
+                            style: TextStyle(
+                              color: gray,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                          SizedBox(height: 15),
                           Row(
                             children: [
+                              Icon(
+                                Icons.ac_unit,
+                                size: 14,
+                                color: gray,
+                              ),
+                              SizedBox(width: 2),
                               Text(
-                                "By " + blogList[index]['author'],
+                                "Fashion By ",
                                 style: TextStyle(
-                                  color: black,
-                                  fontSize: 16,
+                                  color: gray,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.w300,
                                 ),
                               ),
-                              SizedBox(width: 30),
+                              SizedBox(width: 5),
                               Text(
-                                blogList[index]['dateCreate'],
+                                blogList[index]['author'],
                                 style: TextStyle(
-                                  color: gray,
+                                  color: black,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w300,
                                 ),
