@@ -34,42 +34,45 @@ class CartItem extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 10,
-                right: 15,
-              ),
-              child: SizedBox(
-                width: 32,
-                child: TextButton(
-                  onPressed: favoriteFunc!,
-                  child: Icon(
-                    Icons.favorite_border,
-                    color: white,
-                    size: 18,
+            Positioned(
+              top: 5,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 5),
+                child: SizedBox(
+                  width: 32,
+                  child: TextButton(
+                    onPressed: favoriteFunc!,
+                    child: Icon(
+                      Icons.favorite_border,
+                      color: white,
+                      size: 18,
+                    ),
                   ),
                 ),
               ),
             ),
             Positioned(
-                bottom: 20,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: SizedBox(
-                    width: 32,
-                    child: TextButton(
-                      onPressed: addCartFunc!,
-                      child: Icon(
-                        Icons.add,
-                        color: white,
-                        size: 18,
-                      ),
-                      style: TextButton.styleFrom(
-                        backgroundColor: black,
-                      ),
+              bottom: 5,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 5),
+                child: SizedBox(
+                  width: 32,
+                  child: TextButton(
+                    onPressed: addCartFunc!,
+                    child: Icon(
+                      Icons.add,
+                      color: white,
+                      size: 18,
+                    ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: black,
                     ),
                   ),
-                ))
+                ),
+              ),
+            )
           ],
         ),
         SizedBox(height: 15),
