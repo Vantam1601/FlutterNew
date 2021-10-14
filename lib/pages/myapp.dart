@@ -148,7 +148,10 @@ class _Mi_app_PageState extends State<Mi_app> {
       children: [
         HomePage() ,
         SearchPage() ,
+        AccountPage(),
+        AccountPage(),
         AccountPage()
+
       ],
     );
 
