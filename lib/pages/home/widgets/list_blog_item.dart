@@ -29,75 +29,81 @@ class _ListBlogItemsState extends State<ListBlogItems> {
               child: Container(
                 height: 100,
                 width: double.infinity,
-                child: Row(
-                  children: [
-                    Container(
-                      height: 100,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            blogList[index]['imgUrl'],
+                child: TextButton(
+                  onPressed: () => print("Blog detail"),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 100,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              blogList[index]['imgUrl'],
+                            ),
+                            fit: BoxFit.cover,
                           ),
-                          fit: BoxFit.cover,
                         ),
                       ),
-                    ),
-                    SizedBox(width: 15),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            blogList[index]['title'],
-                            style: TextStyle(
-                              color: black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w800,
+                      SizedBox(width: 15),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 5),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              blogList[index]['title'],
+                              style: TextStyle(
+                                color: black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            blogList[index]['dateCreate'],
-                            style: TextStyle(
-                              color: gray,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          SizedBox(height: 15),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.ac_unit,
-                                size: 14,
+                            SizedBox(height: 15),
+                            Text(
+                              blogList[index]['dateCreate'],
+                              style: TextStyle(
                                 color: gray,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w300,
                               ),
-                              SizedBox(width: 2),
-                              Text(
-                                "Fashion By ",
-                                style: TextStyle(
+                            ),
+                            SizedBox(height: 15),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.ac_unit,
+                                  size: 14,
                                   color: gray,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300,
                                 ),
-                              ),
-                              SizedBox(width: 5),
-                              Text(
-                                blogList[index]['author'],
-                                style: TextStyle(
-                                  color: black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300,
+                                SizedBox(width: 2),
+                                Text(
+                                  "Fashion By ",
+                                  style: TextStyle(
+                                    color: gray,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                SizedBox(width: 5),
+                                Text(
+                                  blogList[index]['author'],
+                                  style: TextStyle(
+                                    color: black,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  style: TextButton.styleFrom(
+                    primary: gray.withOpacity(0.05),
+                  ),
                 ),
               ),
             );

@@ -10,42 +10,39 @@ class BannerSale extends StatelessWidget {
     return Column(
       children: [
         Container(
-          child: Stack(
-            children: [
-              Container(
-                height: 200,
-                width: double.infinity,
-                child: Image(
-                  image: NetworkImage(
-                    homeImg,
-                  ),
-                  fit: BoxFit.cover,
+          height: 200,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(
+                homeImg,
+              ),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Align(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: white,
+                onPrimary: black.withOpacity(0.45),
+                shadowColor: Colors.greenAccent,
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                minimumSize: Size(220, 50),
+              ),
+              onPressed: () => print("Shop Sale"),
+              child: Text(
+                'Shop Sale',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400,
+                  color: black,
                 ),
               ),
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 60,
-                child: Container(
-                  width: 60,
-                  height: 50,
-                  child: TextButton(
-                    onPressed: () => print("Shop Sale"),
-                    child: Text(
-                      "Shop Sale",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: black,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                      primary: green,
-                    ),
-                  ),
-                ),
-              )
-            ],
+            ),
           ),
         ),
         SizedBox(height: 15),
@@ -54,12 +51,12 @@ class BannerSale extends StatelessWidget {
           width: double.infinity,
           color: gray.withOpacity(0.05),
           child: Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 0),
+            padding: const EdgeInsets.only(top: 16, bottom: 0),
             child: Text(
               "Free Shipping & Free Return",
               style: TextStyle(
                 fontSize: 16,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
                 color: black,
               ),
               textAlign: TextAlign.center,

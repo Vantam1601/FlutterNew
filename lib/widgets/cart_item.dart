@@ -21,16 +21,17 @@ class CartItem extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Container(
-              width: 140,
-              height: 180,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                image: DecorationImage(
-                  image: NetworkImage(
-                    imgUrl!,
+            InkWell(
+              onTap: () => print("Cart item"), // Handle your callback.
+              splashColor: Colors.brown.withOpacity(0.5),
+              child: Ink(
+                height: 180,
+                width: 150,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(imgUrl!),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
             ),
