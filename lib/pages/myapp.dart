@@ -1,4 +1,5 @@
 import 'package:demoplashscreen/json/constant.dart';
+import 'package:demoplashscreen/pages/HomePage.dart';
 import 'package:demoplashscreen/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _Mi_app_PageState extends State<Mi_app> {
       backgroundColor: Colors.white,
       bottomNavigationBar: getFooter(),
       appBar: getAppBar(),
+      body: getBody(),
     );
   }
 
@@ -138,5 +140,16 @@ class _Mi_app_PageState extends State<Mi_app> {
       default :
     }
   }
+  getBody() {
+    return IndexedStack(
+      index: activeTab,
+      children: [
+        HomePage()
+      ],
+    );
+
+  }
 }
+
+
 
