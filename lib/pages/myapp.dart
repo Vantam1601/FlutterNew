@@ -1,5 +1,7 @@
 import 'package:demoplashscreen/json/constant.dart';
+import 'package:demoplashscreen/pages/AccountPage.dart';
 import 'package:demoplashscreen/pages/HomePage.dart';
+import 'package:demoplashscreen/pages/SearchPage.dart';
 import 'package:demoplashscreen/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -82,7 +84,7 @@ class _Mi_app_PageState extends State<Mi_app> {
         ) ;
         break ;
       case 1:
-        appbar = null ;
+        appbar = AppBar() ;
         break ;
       case 2:
         return AppBar(
@@ -144,7 +146,9 @@ class _Mi_app_PageState extends State<Mi_app> {
     return IndexedStack(
       index: activeTab,
       children: [
-        HomePage()
+        HomePage() ,
+        SearchPage() ,
+        AccountPage()
       ],
     );
 
