@@ -98,9 +98,6 @@ class _AccountPageState extends State<AccountPage> {
           ),
         ) ,
         SizedBox(height:  30 ,) ,
-        Divider(
-          thickness: 1,
-        ) ,
         Padding(
           padding: const EdgeInsets.only(left: 20 , right: 20 ) ,
           child: Column(

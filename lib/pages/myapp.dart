@@ -1,5 +1,6 @@
 import 'package:demoplashscreen/json/constant.dart';
 import 'package:demoplashscreen/pages/AccountPage.dart';
+import 'package:demoplashscreen/pages/CartPage.dart';
 import 'package:demoplashscreen/pages/HomePage.dart';
 import 'package:demoplashscreen/pages/SearchPage.dart';
 import 'package:demoplashscreen/theme/colors.dart';
@@ -149,7 +150,7 @@ class _Mi_app_PageState extends State<Mi_app> {
         HomePage() ,
         SearchPage() ,
         AccountPage(),
-        AccountPage(),
+        CartPage(),
         AccountPage()
 
       ],
