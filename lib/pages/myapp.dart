@@ -6,6 +6,7 @@ import 'package:demoplashscreen/pages/SearchPage.dart';
 import 'package:demoplashscreen/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'NavigationBar.dart';
 
 
 class Mi_app extends StatefulWidget {
@@ -23,6 +24,7 @@ class _Mi_app_PageState extends State<Mi_app> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      drawer: NavigationBar(),
       bottomNavigationBar: getFooter(),
       appBar: getAppBar(),
       body: getBody(),
@@ -62,12 +64,13 @@ class _Mi_app_PageState extends State<Mi_app> {
       case 0:
         return AppBar(
           elevation: 0.0 ,
-          backgroundColor: Colors.white,
-          leading: IconButton(
-            icon: const Icon(Icons.view_headline_outlined, color: Colors.black,),
-            tooltip: 'Menu',
-            onPressed: () {},
-          ),
+          backgroundColor: Colors.grey,
+          /*leading: IconButton(
+          icon: const Icon(Icons.view_headline_outlined, color: Colors.black,),
+          tooltip: 'Menu',
+          onPressed: () {
+          },
+        ),*/
           actions: <Widget>[
             IconButton(
               onPressed: (){},
