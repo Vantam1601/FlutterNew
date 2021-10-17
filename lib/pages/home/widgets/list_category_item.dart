@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
 import 'package:flutter_app/pages/home/widgets/title_content.dart';
+import 'package:flutter_app/pages/shop/shop_page.dart';
 import 'package:flutter_app/themes/color.dart';
 
 class ListCategoryItems extends StatefulWidget {
@@ -18,7 +19,12 @@ class _ListCategoryItemsState extends State<ListCategoryItems> {
         TitleContent(
           title: 'Categories',
           textParam: "Show all",
-          functionPress: () => print("Category"),
+          functionPress: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ShopPage(),
+            ),
+          ),
         ),
         SizedBox(height: 10),
         SingleChildScrollView(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/shop/widgets/bg_banner.dart';
 import 'package:flutter_app/pages/shop/widgets/list_category_items.dart';
+import 'package:flutter_app/pages/shop/widgets/search_field.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({Key? key}) : super(key: key);
@@ -12,8 +13,9 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: ListView(
+    return Scaffold(
+      appBar: SearchField(),
+      body: ListView(
         children: [
           BackgroundBanner(),
           ListCategoryItems(),

@@ -22,78 +22,77 @@ class _RootAppState extends State<RootApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: white,
-      appBar: getAppBar(),
       body: getBody(),
       bottomNavigationBar: getFooter(),
     );
   }
 
-  PreferredSizeWidget? getAppBar() {
-    switch (activeTab) {
-      case 0:
-        return AppBar(
-          elevation: 0.8,
-          backgroundColor: white,
-          title: Text(
-            "Home",
-            style: TextStyle(
-              color: black,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        );
+  // PreferredSizeWidget? getAppBar() {
+  //   switch (activeTab) {
+  //     case 0:
+  //       return AppBar(
+  //         elevation: 0.8,
+  //         backgroundColor: white,
+  //         title: Text(
+  //           "Home",
+  //           style: TextStyle(
+  //             color: black,
+  //           ),
+  //           textAlign: TextAlign.center,
+  //         ),
+  //       );
 
-      case 1:
-        return AppBar(
-          elevation: 0.8,
-          backgroundColor: white,
-          title: Text(
-            "Product",
-            style: TextStyle(
-              color: black,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        );
-      case 2:
-        return AppBar(
-          elevation: 0.8,
-          backgroundColor: white,
-          title: Text(
-            "WishList",
-            style: TextStyle(
-              color: black,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        );
-      case 3:
-        return AppBar(
-          elevation: 0.8,
-          backgroundColor: white,
-          title: Text(
-            "Cart",
-            style: TextStyle(
-              color: black,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        );
-      case 4:
-        return AppBar(
-          elevation: 0.8,
-          backgroundColor: white,
-          title: Text(
-            "Me",
-            style: TextStyle(
-              color: black,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        );
-      default:
-    }
-  }
+  //     case 1:
+  //       return AppBar(
+  //         elevation: 0.8,
+  //         backgroundColor: white,
+  //         title: Text(
+  //           "Product",
+  //           style: TextStyle(
+  //             color: black,
+  //           ),
+  //           textAlign: TextAlign.center,
+  //         ),
+  //       );
+  //     case 2:
+  //       return AppBar(
+  //         elevation: 0.8,
+  //         backgroundColor: white,
+  //         title: Text(
+  //           "WishList",
+  //           style: TextStyle(
+  //             color: black,
+  //           ),
+  //           textAlign: TextAlign.center,
+  //         ),
+  //       );
+  //     case 3:
+  //       return AppBar(
+  //         elevation: 0.8,
+  //         backgroundColor: white,
+  //         title: Text(
+  //           "Cart",
+  //           style: TextStyle(
+  //             color: black,
+  //           ),
+  //           textAlign: TextAlign.center,
+  //         ),
+  //       );
+  //     case 4:
+  //       return AppBar(
+  //         elevation: 0.8,
+  //         backgroundColor: white,
+  //         title: Text(
+  //           "Me",
+  //           style: TextStyle(
+  //             color: black,
+  //           ),
+  //           textAlign: TextAlign.center,
+  //         ),
+  //       );
+  //     default:
+  //   }
+  // }
 
   Widget getBody() {
     return IndexedStack(

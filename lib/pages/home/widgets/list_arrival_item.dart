@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
 import 'package:flutter_app/pages/home/widgets/title_content.dart';
 import 'package:flutter_app/widgets/cart_item.dart';

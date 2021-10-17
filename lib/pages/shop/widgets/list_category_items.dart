@@ -12,17 +12,14 @@ class ListCategoryItems extends StatefulWidget {
 class _ListCategoryItemsState extends State<ListCategoryItems> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: List.generate(
-          categories.length,
-          (index) => CategoryItem(
-            imgUrl: categories[index]['imgUrl'].toString(),
-            title: categories[index]['title'].toString(),
-            number: '15',
-            press: () => print("List Proudct by id category"),
-          ),
+    return Column(
+      children: List.generate(
+        categories.length,
+        (index) => CategoryItem(
+          imgUrl: categories[index]['imgUrl'].toString(),
+          title: categories[index]['title'].toString(),
+          number: '15',
+          press: () => print("List Proudct by id category"),
         ),
       ),
     );
