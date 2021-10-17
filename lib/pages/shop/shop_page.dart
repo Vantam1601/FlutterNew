@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/shop/widgets/bg_banner.dart';
+import 'package:flutter_app/pages/shop/widgets/list_category_items.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({Key? key}) : super(key: key);
@@ -10,9 +12,12 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('Shop Page'),
+    return SafeArea(
+      child: ListView(
+        children: [
+          BackgroundBanner(),
+          ListCategoryItems(),
+        ],
       ),
     );
   }
