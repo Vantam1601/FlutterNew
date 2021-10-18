@@ -55,7 +55,7 @@ class _SearchPageState extends State<SearchPage> {
         Padding(
           padding: const EdgeInsets.only(left: 20 , right: 20 ) ,
           child: Column(
-            children: List.generate(accountList.length , (index) {
+            children: List.generate(productList.length , (index) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 15),
                 child: Column(
@@ -69,9 +69,9 @@ class _SearchPageState extends State<SearchPage> {
                           decoration: BoxDecoration(
                               borderRadius:  BorderRadius.circular(10) ,
                               image: DecorationImage(
-                                  image: NetworkImage(profileUrl),fit: BoxFit.cover)),
+                                  image: NetworkImage(productList[index]['img']),fit: BoxFit.cover)),
                         ) ,
-                        Text(accountList[index].toString(), style: TextStyle(
+                        Text(productList[index]['name'].toString(), style: TextStyle(
                             fontSize: 16
                         ),),
                         Icon(Icons.arrow_forward_ios, size: 16,color: Colors.blueAccent.withOpacity(0.5),)

@@ -22,55 +22,12 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       padding: EdgeInsets.zero,
       children: [
-        Stack(
-          children: [
-            Container(
-              width: size.width,
-              height: 500,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(homeImg), fit: BoxFit.cover)
-              ),
-            ) ,
-            Padding(
-            padding: const EdgeInsets.only(bottom: 5),
-            child: Positioned(
-              bottom: 20,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:[
-                    Text('Winter Conllection', style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold ),),
-                    SizedBox(
-                      height: 10,),
-                    Row(
-                          children: [
-                            Text('DISCOVER', style: TextStyle(
-                                fontSize: 25,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold ),),
-                            SizedBox( width: 5,),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white,
-                              size: 18,
-                            )
-                          ],
-                        ),
-                      ],
-                ),
-              ),
-            
-            )
-              
-              
-            )
-          ],
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: CustomeCarouselHomePage(
+            items: slider,),
         ) ,
+
         SizedBox( height: 40,) ,
 
         Padding(
@@ -96,7 +53,55 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+        Stack(
+          children: [
+            Container(
+              width: size.width,
+              height: 500,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(homeImg), fit: BoxFit.cover)
+              ),
+            ) ,
+            Padding(
+                padding: const EdgeInsets.only(bottom: 5),
+                child: Positioned(
+                  bottom: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:[
+                        Text('Winter Conllection', style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold ),),
+                        SizedBox(
+                          height: 10,),
+                        Row(
+                          children: [
+                            Text('DISCOVER', style: TextStyle(
+                                fontSize: 25,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold ),),
+                            SizedBox( width: 5,),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.white,
+                              size: 18,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
 
+                )
+
+
+            )
+          ],
+        ) ,
         SizedBox(height: 20,),
 
         SingleChildScrollView(
@@ -219,9 +224,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         SizedBox(height: 40,),
-
-        CustomeCarouselHomePage(
-          items: slider,) ,
         SizedBox(height: 20,),
         Padding(
           padding: const EdgeInsets.only(left: 15 , right: 15),

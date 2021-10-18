@@ -19,7 +19,7 @@ class _NavigationBarState extends State<NavigationBar> {
           Padding(
             padding: const EdgeInsets.only(left: 20 , right: 20 ) ,
             child: Column(
-              children: List.generate(accountList.length , (index) {
+              children: List.generate(menuBars.length , (index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 15),
                   child: Column(
@@ -27,7 +27,7 @@ class _NavigationBarState extends State<NavigationBar> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text(accountList[index].toString(), style: TextStyle(
+                          Text(menuBars[index].toString(), style: TextStyle(
                               fontSize: 16
                           ),),
                           Icon(Icons.arrow_forward_ios, size: 16,color: Colors.blueAccent.withOpacity(0.5),)

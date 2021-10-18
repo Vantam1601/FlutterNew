@@ -316,15 +316,32 @@ const List cartList = [
     "size": "M"
   },
 ];
+const List favoritestList = [
+  {
+    "img":
+    "https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "Snoopy T-shirt",
+    "ref": "04559812",
+    "price": "\$40",
+    "size": "S"
+  },
+  {
+    "img":
+    "https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "name": "American",
+    "ref": "04459811",
+    "price": "\$30",
+    "size": "M"
+  },
+];
 
-List menusMore = [
+List menuBars = [
   "Home",
-  "Explore",
-  "Stores",
+  "Search",
+  "Shop",
   "Cart",
-  "Notifications",
-  "Loyalty Card",
-  "My orders"
+  "Favorit",
+  "Account",
 ];
 
 List itemsTab = [
@@ -343,6 +360,39 @@ List accountList = [
   "Payment Information",
   "Language",
   "Privacy Settings"
+];
+//hien thi trong trang tim kiem
+List productList = [
+  {
+    "img":
+    "https://chiase24.com/wp-content/uploads/2019/07/Tong-hop-hinh-anh-gai-xinh-de-thuong-cute-nhat-6-1.jpg",
+    "name": "Women",
+    "open": 1
+  },
+  {
+    "img":
+    "https://toigingiuvedep.vn/wp-content/uploads/2021/06/hinh-anh-trai-dep-han-quoc-820x547.jpg",
+    "name": "Men",
+    "open": 1
+  },
+  {
+    "img":
+    "https://www.bu.edu/files/2019/09/are-kids-hardwired-for-revenge.jpg",
+    "name": "Kids",
+    "open": 1
+  },
+  {
+    "img":
+    "https://dongphuchaianh.vn/wp-content/uploads/2021/07/quan-ao-the-thao-nam-adidas-1.jpg",
+    "name": "Sport",
+    "open": 1
+  },
+  {
+    "img":
+    "https://my-test-11.slatic.net/p/4ece6b412e32771bb1743d4631bbf8fe.jpg_320x320.jpg",
+    "name": "Decor",
+    "open": 1
+  },
 ];
 
 List storeList = [
