@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
+import 'package:flutter_app/pages/products/list_products/list_product_items.dart';
 import 'package:flutter_app/pages/shop/widgets/category_item.dart';
 
 class ListCategoryItems extends StatefulWidget {
@@ -19,7 +20,12 @@ class _ListCategoryItemsState extends State<ListCategoryItems> {
           imgUrl: categories[index]['imgUrl'].toString(),
           title: categories[index]['title'].toString(),
           number: '15',
-          press: () => print("List Proudct by id category"),
+          press: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ListProduct(),
+            ),
+          ),
         ),
       ),
     );
