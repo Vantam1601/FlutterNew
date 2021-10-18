@@ -33,8 +33,8 @@ class _RootAppState extends State<RootApp> {
       children: [
         HomePage(),
         ShopPage(),
-        CartPage(),
         WishListPage(),
+        CartPage(),
         ProfilePage(),
       ],
     );
@@ -57,17 +57,29 @@ class _RootAppState extends State<RootApp> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(itemsTab.length, (index) {
-            return IconButton(
-              onPressed: () {
-                setState(() {
-                  activeTab = index;
-                });
-              },
-              icon: Icon(
-                itemsTab[index]['icon'],
-                size: itemsTab[index]['size'],
-                color: activeTab == index ? accent : black,
-              ),
+            return Column(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      activeTab = index;
+                    });
+                  },
+                  icon: Icon(
+                    itemsTab[index]['icon'],
+                    size: itemsTab[index]['size'],
+                    color: activeTab == index ? black : gray.withOpacity(0.5),
+                  ),
+                ),
+                Text(
+                  itemsTab[index]['name'],
+                  style: TextStyle(
+                    color: activeTab == index ? black : gray.withOpacity(0.5),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             );
           }),
         ),
