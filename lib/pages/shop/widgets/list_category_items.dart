@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/data.dart';
-import 'package:flutter_app/pages/products/list_products/list_product_items.dart';
+import 'package:flutter_app/pages/products/list_product_page.dart';
 import 'package:flutter_app/pages/shop/widgets/category_item.dart';
 
 class ListCategoryItems extends StatefulWidget {

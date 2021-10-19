@@ -25,8 +25,8 @@ class CartItem extends StatelessWidget {
               onTap: () => print("Cart item"), // Handle your callback.
               splashColor: Colors.brown.withOpacity(0.5),
               child: Ink(
-                height: 180,
-                width: 150,
+                height: 165,
+                width: 145,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(imgUrl!),
@@ -76,7 +76,7 @@ class CartItem extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 5),
         Container(
           width: 140,
           child: Column(
@@ -87,7 +87,6 @@ class CartItem extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: black,
-                  height: 1.5,
                 ),
               ),
               SizedBox(height: 5),
@@ -96,7 +95,6 @@ class CartItem extends StatelessWidget {
                 style: TextStyle(
                   color: grey,
                   fontWeight: FontWeight.bold,
-                  height: 1.5,
                 ),
               ),
             ],
