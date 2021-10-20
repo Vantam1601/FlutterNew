@@ -70,6 +70,10 @@ class _FavoritesPageState extends State<FavoritesPage> {
                                   fontSize: 20 ,color: Colors.grey
                               ),
                             ),
+                            ElevatedButton(
+                                onPressed:(){},
+                                child: Text("Add to cart")
+                            )
 
                           ],
                         ),

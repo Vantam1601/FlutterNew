@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-
-const String APP_TITLE = 'SHOP UI';
-
+//home iamge
 const String homeImg =
     'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
-
+//account image
 const String profileUrl =
     "https://images.unsplash.com/photo-1616597082843-de7ce757d548?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
-
+//thể loại
 const List<Map<String, Object>> categories = [
   {
     'title': 'New In',
@@ -35,7 +33,7 @@ const List<Map<String, Object>> categories = [
         'https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
   },
 ];
-
+// đề nghị
 const List<Map<String, Object>> recommends = [
   {
     'title': 'Summer Loose Korean T-shirt',
@@ -68,7 +66,7 @@ const List<Map<String, Object>> recommends = [
         'https://images.unsplash.com/photo-1541257710737-06d667133a53?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   }
 ];
-
+//đã xem gần đây
 const List<Map<String, Object>> recently = [
   {
     'title': 'Summer Loose Korean T-shirt',
@@ -101,14 +99,14 @@ const List<Map<String, Object>> recently = [
         'https://images.unsplash.com/photo-1507007727303-1532f71109cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   }
 ];
-
+// ảnh slider home
 const List<String> slider = [
   'https://images.unsplash.com/photo-1465408953385-7c4627c29435?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzV8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
   'https://images.unsplash.com/flagged/photo-1574876242429-3164fb8bf4bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   'https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
   'https://images.unsplash.com/photo-1483118714900-540cf339fd46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60'
 ];
-
+//khám phá
 const List<Map<String, Object>> explores = [
   {
     'title': 'Jackets',
@@ -141,7 +139,7 @@ const List<Map<String, Object>> explores = [
         'https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
   }
 ];
-
+// sản phẩm khám phá
 const List<Map<String, Object>> exploreProduct = [
   {
     'title': 'Jacket',
@@ -174,14 +172,14 @@ const List<Map<String, Object>> exploreProduct = [
         'https://images.unsplash.com/photo-1560891958-68bb1fe7fb78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
   }
 ];
-
+// ảnh , khám phá slide
 const List<String> exploreSlide = [
   'https://images.unsplash.com/photo-1591997297702-d43f7f008486?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQ3MzMyfQ&auto=format&fit=crop&w=500&q=60',
   'https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   'https://images.unsplash.com/photo-1561537051-cf36d6224a9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   'https://images.unsplash.com/photo-1549822944-02701d3e20ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
 ];
-
+// thể loại con
 const List<Map<String, Object>> subcategories = [
   {
     'title': 'T-Shirts',
@@ -234,14 +232,14 @@ const List<Map<String, Object>> subcategories = [
         'https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20190804145741-472815.JPG'
   },
 ];
-
+//màu sắc
 const List<Map<String, Color>> colors = [
   {'title': Colors.green},
   {'title': Colors.blue},
   {'title': Colors.orange},
   {'title': Colors.black},
 ];
-
+//size
 const List<Map<String, Object>> sizes = [
   {'title': 'S'},
   {'title': 'M'},
@@ -249,7 +247,7 @@ const List<Map<String, Object>> sizes = [
   {'title': 'XL'},
   {'title': 'XXL'},
 ];
-
+//quảng cáo khám phá
 const List exploreBanner = [
   {
     'year': '2019',
@@ -280,16 +278,16 @@ const List exploreBanner = [
     'buttonTitle': 'SEE THE FASHION'
   },
 ];
-
+//chi chi tiết sản phẩm
 const List productDetail = [
   'https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
   'https://images.unsplash.com/photo-1545911825-6bfa5b0c34a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
   'https://images.unsplash.com/photo-1572112686886-5c0b5bc8dacd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
   'https://images.unsplash.com/photo-1582041148887-67274b989ae3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
 ];
-
+//nhãn hiệu
 const List brands = ['Adidas', 'Bershka', 'Converse', 'Diesel'];
-
+//lịch sử tìm kiếm
 const List historySearches = [
   'Red Sunglasses',
   'Large T-Shirt',
@@ -297,7 +295,7 @@ const List historySearches = [
   'Blue Sweater',
   'Levi’s Jeans'
 ];
-
+//danh sách giỏ hàng
 const List cartList = [
   {
     "img":
@@ -316,6 +314,7 @@ const List cartList = [
     "size": "M"
   },
 ];
+//danh sách yêu thích
 const List favoritestList = [
   {
     "img":
@@ -334,7 +333,7 @@ const List favoritestList = [
     "size": "M"
   },
 ];
-
+//menu ngang
 List menuBars = [
   "Home",
   "Search",
@@ -343,7 +342,7 @@ List menuBars = [
   "Favorit",
   "Account",
 ];
-
+/// icon bottom bar
 List itemsTab = [
   {"icon": Icons.home, "size": 28.0},
   {"icon": Icons.search, "size": 22.0},
@@ -351,7 +350,7 @@ List itemsTab = [
   {"icon": Icons.shopping_bag, "size": 22.0},
   {"icon": Icons.account_circle, "size": 25.0},
 ];
-
+// danh mục tài khoản
 List accountList = [
   "Account Details",
   "Loyalty card & offers",
@@ -361,7 +360,7 @@ List accountList = [
   "Language",
   "Privacy Settings"
 ];
-//hien thi trong trang tim kiem
+//hien thi trong trang tim kiem / danh mục thể loại
 List productList = [
   {
     "img":
@@ -394,7 +393,7 @@ List productList = [
     "open": 1
   },
 ];
-
+// danh sách cửa hàng
 List storeList = [
   {
     "img":

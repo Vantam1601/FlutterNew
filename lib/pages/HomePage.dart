@@ -27,9 +27,6 @@ class _HomePageState extends State<HomePage> {
           child: CustomeCarouselHomePage(
             items: slider,),
         ) ,
-
-        SizedBox( height: 40,) ,
-
         Padding(
           padding: const EdgeInsets.only(left: 15 , right: 15),
           child: Row(
