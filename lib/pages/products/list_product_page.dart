@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/cart/provider/cart.dart';
+import 'package:flutter_app/pages/products/models/product.dart';
 // import 'package:flutter_app/pages/products/models/product.dart';
 import 'package:flutter_app/pages/products/widgets/appbar.dart';
 import 'package:flutter_app/pages/products/widgets/list_category.dart';
+import 'package:flutter_app/widgets/cart_item.dart';
 // import 'package:flutter_app/widgets/cart_item.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +20,34 @@ class ListProduct extends StatelessWidget {
             preferredSize: Size.fromHeight(50.0),
             child: AppBarListProduct(),
           ),
-          body: ListCategory(),
+          body: Column(
+            children: [
+              ListCategory(),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: GridView.builder(
+                    itemCount: products.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 15,
+                      crossAxisSpacing: 15,
+                      childAspectRatio: 0.85,
+                    ),
+                    itemBuilder: (context, index) => CartItem(
+                      sizeCart: "small",
+                      imgUrl: products[index].image,
+                      name: products[index].name,
+                      price: products[index].price.toString(),
+                      start: 5.toString(),
+                      favoriteFunc: () => print("like"),
+                      addCartFunc: () => cart.add(products[index]),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           // GridView.count(
           //   padding: const EdgeInsets.only(left: 20, top: 20),
           //   crossAxisSpacing: 10,

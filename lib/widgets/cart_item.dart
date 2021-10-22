@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/themes/color.dart';
 
 class CartItem extends StatelessWidget {
+  final String? sizeCart;
   final String? imgUrl, name, price, start;
   final Function()? favoriteFunc, addCartFunc;
   const CartItem(
@@ -11,7 +12,8 @@ class CartItem extends StatelessWidget {
       this.price,
       this.start,
       this.favoriteFunc,
-      this.addCartFunc})
+      this.addCartFunc,
+      this.sizeCart})
       : super(key: key);
 
   @override
@@ -25,8 +27,8 @@ class CartItem extends StatelessWidget {
               onTap: () => print("Cart item"), // Handle your callback.
               splashColor: Colors.brown.withOpacity(0.5),
               child: Ink(
-                height: 165,
-                width: 145,
+                height: sizeCart == "big" ? 200 : 175,
+                width: sizeCart == "big" ? 180 : 165,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(imgUrl!),

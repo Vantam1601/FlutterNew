@@ -32,6 +32,7 @@ class _ListBestSellerItemsState extends State<ListBestSellerItems> {
                   return Padding(
                     padding: const EdgeInsets.only(left: 15),
                     child: CartItem(
+                      sizeCart: "big",
                       imgUrl: products[index].image.toString(),
                       name: products[index].name.toString(),
                       price: products[index].price.toString(),
