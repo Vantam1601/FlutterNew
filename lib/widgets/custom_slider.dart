@@ -14,7 +14,6 @@ class CustomeCarouselHomePage extends StatefulWidget {
 
 class _CustomeCarouselHomePageState extends State<CustomeCarouselHomePage> {
   int activeIndex = 0;
-
   setActiveDot(index) {
     setState(() {
       activeIndex = index;
@@ -69,25 +68,20 @@ class _CustomeCarouselHomePageState extends State<CustomeCarouselHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 30,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: List.generate(widget.items!.length, (idx) {
-                          return activeIndex == idx ? ActiveDot() : InactiveDot();
-                        })),
+                        children: List.generate(widget.items!.length, (index) =>buidDot(index))),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(right: 10),
+                    padding: EdgeInsets.only(right: 10),
                     child: Container(
                       height: 35,
-                    width: 35,
-                    child: FloatingActionButton(
-                      onPressed: (){},
-                      backgroundColor: Colors.black,
-                      child: Icon(Icons.arrow_forward, size: 20,),
-                    ),
+                      width: 35,
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        backgroundColor: Colors.black,
+                        child: Icon(Icons.arrow_forward, size: 20,),
+                      ),
 
                     ),
                   )
@@ -100,39 +94,16 @@ class _CustomeCarouselHomePageState extends State<CustomeCarouselHomePage> {
       ],
     );
   }
+  buidDot(int index) {
+    return AnimatedContainer(
+      duration: Duration(seconds: 1),
+      margin: EdgeInsets.only(right: 5),
+      height: 6, width:activeIndex==index ? 10:6,
+      decoration: BoxDecoration(
+          color:  activeIndex == index ? Colors.deepOrange : Colors.grey,
+          borderRadius: BorderRadius.circular(3)
+      ),
+    );
+  }
 
 }
-  class ActiveDot extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-  return Padding(
-  padding: const EdgeInsets.only(right: 8),
-  child: Container(
-  width: 8,
-  height: 8,
-  decoration: BoxDecoration(
-  color: Colors.blue,
-  borderRadius: BorderRadius.circular(5),
-  ),
-  ),
-  );
-  }
-  }
-
-  class InactiveDot extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-  return Padding(
-  padding: const EdgeInsets.only(right: 8.0),
-  child: Container(
-  width: 8,
-  height: 8,
-  decoration: BoxDecoration(
-  color: Colors.grey,
-  borderRadius: BorderRadius.circular(5),
-  ),
-  ),
-  );
-  }
-  }
-
