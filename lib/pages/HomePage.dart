@@ -1,3 +1,4 @@
+import 'package:demoplashscreen/json/CategoryData.dart';
 import 'package:demoplashscreen/json/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:demoplashscreen/widgets/custom_slider.dart';
@@ -115,10 +116,9 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(categories[index]['imgUrl'].toString()),
+                            image: NetworkImage(categories[index].imgUrl.toString()),
                             fit: BoxFit.cover),
                             borderRadius : BorderRadius.circular(5)),
-
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Text(
-                            categories[index]['title'].toString(),
+                            categories[index].title.toString(),
                             style: TextStyle(
                               fontSize: 18 ,
                               fontWeight: FontWeight.bold ,

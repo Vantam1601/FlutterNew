@@ -1,5 +1,6 @@
 import 'package:demoplashscreen/pages/ProductDetails.dart';
 import 'package:demoplashscreen/pages/SplashPage.dart';
+import 'package:demoplashscreen/pages/myapp.dart';
 import 'package:flutter/material.dart';
 
 void main() {

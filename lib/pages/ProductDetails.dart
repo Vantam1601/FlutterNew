@@ -1,3 +1,6 @@
+import 'package:demoplashscreen/json/constant.dart';
+import 'package:demoplashscreen/widgets/custom_slider.dart';
+import 'package:demoplashscreen/widgets/custom_slider_productdetails.dart';
 import 'package:flutter/material.dart';
 class ProductDetailsPage extends StatelessWidget {
   const ProductDetailsPage({Key? key}) : super(key: key);
@@ -12,8 +15,21 @@ class ProductDetailsPage extends StatelessWidget {
             press: ()=>Navigator.pop(context),
         )
       ),
+      body:getBody(),
     );
   }
+}
+
+getBody() {
+  return ListView(
+    children: [
+      Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: CustomeCarouselProduct(
+          items: slider,),
+      )
+    ],
+  );
 }
 class RoundedIconBtn extends StatelessWidget {
   const RoundedIconBtn({Key? key,

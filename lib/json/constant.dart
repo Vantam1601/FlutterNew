@@ -1,3 +1,4 @@
+import 'package:demoplashscreen/models/CategoryModel.dart';
 import 'package:flutter/material.dart';
 //home iamge
 const String homeImg =
@@ -5,34 +6,7 @@ const String homeImg =
 //account image
 const String profileUrl =
     "https://images.unsplash.com/photo-1616597082843-de7ce757d548?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
-//thể loại
-const List<Map<String, Object>> categories = [
-  {
-    'title': 'New In',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-  },
-  {
-    'title': 'Clothing',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-  },
-  {
-    'title': 'Men',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1521341057461-6eb5f40b07ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
-  },
-  {
-    'title': 'Women',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-  },
-  {
-    'title': 'Couple',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-  },
-];
+
 // đề nghị
 const List<Map<String, Object>> recommends = [
   {
@@ -106,149 +80,8 @@ const List<String> slider = [
   'https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
   'https://images.unsplash.com/photo-1483118714900-540cf339fd46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60'
 ];
-//khám phá
-const List<Map<String, Object>> explores = [
-  {
-    'title': 'Jackets',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Coats',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Accessories',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1509741102003-ca64bfe5f069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Demin',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1548435407-2d408a5f0aa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Handbag',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Hat',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  }
-];
-// sản phẩm khám phá
-const List<Map<String, Object>> exploreProduct = [
-  {
-    'title': 'Jacket',
-    'subTitle': 'Blues Explorsion',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Coats',
-    'subTitle': 'Blues Explorsion',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Accessories',
-    'subTitle': 'Blues Explorsion',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Demin',
-    'subTitle': 'Blues Explorsion',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1544642899-f0d6e5f6ed6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Handbag',
-    'subTitle': 'Blues Explorsion',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1560891958-68bb1fe7fb78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  }
-];
-// ảnh , khám phá slide
-const List<String> exploreSlide = [
-  'https://images.unsplash.com/photo-1591997297702-d43f7f008486?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjQ3MzMyfQ&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1561537051-cf36d6224a9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1549822944-02701d3e20ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
-];
-// thể loại con
-const List<Map<String, Object>> subcategories = [
-  {
-    'title': 'T-Shirts',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i3/2472663307/O1CN01GHWzn61aIeOP2exzq_!!2472663307-0-lubanu-s.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Sweats',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i1/2854425749/O1CN011sL5R1iPjWP3kmt_!!2854425749.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Jackets',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i3/732039845/O1CN01LL4Kdt2Mb3sOFPWIl_!!732039845-0-lubanu-s.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Jeans',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i4/3655303985/O1CN01XICa671fJAsO7Q90Q_!!0-item_pic.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Overalls',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i1/278238551/O1CN019NPekl2D2PMdIXp28_!!278238551-0-lubanu-s.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Skirts',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i2/1595030501/O1CN01qyKPJJ1FZUzEjUOIY_!!1595030501.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Backpack',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i4/1595030501/O1CN01pqxD2f1FZUywgzA24_!!1595030501.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Bag',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i4/3655303985/O1CN01vxwMwF1fJAtErBkyH_!!3655303985.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Watch',
-    'imgUrl':
-        'https://img.alicdn.com/imgextra/i2/2600752020/O1CN01safAmD1QnCeuLUN3C_!!2600752020.jpg_500x500.jpg'
-  },
-  {
-    'title': 'Dresses',
-    'imgUrl':
-        'https://myfashion2017.s3.amazonaws.com/thum/Thefashion_20190804145741-472815.JPG'
-  },
-];
-//màu sắc
-const List<Map<String, Color>> colors = [
-  {'title': Colors.green},
-  {'title': Colors.blue},
-  {'title': Colors.orange},
-  {'title': Colors.black},
-];
-//size
-const List<Map<String, Object>> sizes = [
-  {'title': 'S'},
-  {'title': 'M'},
-  {'title': 'L'},
-  {'title': 'XL'},
-  {'title': 'XXL'},
-];
-//quảng cáo khám phá
-const List exploreBanner = [
+
+const List exploreBannerr = [
   {
     'year': '2019',
     'title': 'Urban Collection',
