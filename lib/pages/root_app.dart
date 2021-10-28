@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/list_icon.dart';
-import 'package:flutter_app/pages/cart/cart_page.dart';
-import 'package:flutter_app/pages/home/home_page.dart';
-import 'package:flutter_app/pages/profile/profile_page.dart';
-import 'package:flutter_app/pages/shop/shop_page.dart';
-import 'package:flutter_app/pages/wish_page.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../data/list_icon.dart';
+import '../../pages/cart/cart_page.dart';
+import '../../pages/home/home_page.dart';
+import '../../pages/profile/profile_page.dart';
+import '../../pages/shop/shop_page.dart';
+import '../../pages/wish_page.dart';
+import '../../themes/color.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);

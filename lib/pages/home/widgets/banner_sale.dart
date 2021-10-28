@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/data.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../data/data.dart';
+import '../../../themes/color.dart';
 
 class BannerSale extends StatelessWidget {
   const BannerSale({Key? key}) : super(key: key);

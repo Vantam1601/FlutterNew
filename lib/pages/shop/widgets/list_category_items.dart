@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/data.dart';
-import 'package:flutter_app/pages/products/list_product_page.dart';
-import 'package:flutter_app/pages/shop/widgets/category_item.dart';
+import '../../../data/data.dart';
+import '../../../pages/products/list_product_page.dart';
+import '../../../pages/shop/widgets/category_item.dart';
 
 class ListCategoryItems extends StatefulWidget {
   const ListCategoryItems({Key? key}) : super(key: key);

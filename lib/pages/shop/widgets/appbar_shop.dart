@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/shop/search_page.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../pages/shop/search_page.dart';
+import '../../../themes/color.dart';
 
 class AppBarSearch extends StatelessWidget implements PreferredSizeWidget {
   const AppBarSearch({Key? key}) : super(key: key);

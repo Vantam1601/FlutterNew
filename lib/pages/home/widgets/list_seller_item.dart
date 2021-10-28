@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/cart/provider/cart.dart';
-import 'package:flutter_app/pages/home/widgets/title_content.dart';
-import 'package:flutter_app/pages/products/models/product.dart';
-import 'package:flutter_app/widgets/cart_item.dart';
+import '../../../pages/cart/provider/cart.dart';
+import '../../../pages/home/widgets/title_content.dart';
+import '../../../pages/products/models/product.dart';
+import '../../../widgets/cart_item.dart';
 import 'package:provider/provider.dart';
 
 class ListBestSellerItems extends StatefulWidget {

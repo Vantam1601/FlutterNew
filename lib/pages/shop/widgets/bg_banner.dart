@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/resources/image_url.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../resources/image_url.dart';
+import '../../../themes/color.dart';
 
 class BackgroundBanner extends StatelessWidget {
   const BackgroundBanner({Key? key}) : super(key: key);

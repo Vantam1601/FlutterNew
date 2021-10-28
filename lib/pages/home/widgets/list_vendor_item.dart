@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/data.dart';
-import 'package:flutter_app/pages/home/widgets/title_content.dart';
-import 'package:flutter_app/widgets/vendor_item.dart';
+import '../../../data/data.dart';
+import '../../../pages/home/widgets/title_content.dart';
+import '../../../widgets/vendor_item.dart';
 
 class ListVendorItems extends StatefulWidget {
   const ListVendorItems({Key? key}) : super(key: key);

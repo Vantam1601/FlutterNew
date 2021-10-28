@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../themes/color.dart';
 
 class OnBoardContent extends StatelessWidget {
   const OnBoardContent({

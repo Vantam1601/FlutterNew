@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/cart/cart_page.dart';
-import 'package:flutter_app/pages/cart/provider/cart.dart';
-import 'package:flutter_app/pages/products/models/product.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../pages/cart/cart_page.dart';
+import '../../pages/cart/provider/cart.dart';
+import '../../pages/products/models/product.dart';
+import '../../themes/color.dart';
 import 'package:provider/provider.dart';
 
 class DetailProduct extends StatelessWidget {

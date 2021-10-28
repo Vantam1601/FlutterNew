@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/data.dart';
-import 'package:flutter_app/pages/home/home_page.dart';
-import 'package:flutter_app/pages/shop/shop_page.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../data/data.dart';
+import '../../../pages/home/home_page.dart';
+import '../../../pages/shop/shop_page.dart';
+import '../../../themes/color.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);

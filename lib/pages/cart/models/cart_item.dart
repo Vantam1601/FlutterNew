@@ -1,4 +1,4 @@
-import 'package:flutter_app/pages/products/models/product.dart';
+import '../../../pages/products/models/product.dart';
 
 class CartItem {
   final int? id;

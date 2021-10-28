@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/onboard/widgets/body.dart';
+import '../../pages/onboard/widgets/body.dart';
 
 class OnBoardPage extends StatelessWidget {
   const OnBoardPage({Key? key}) : super(key: key);

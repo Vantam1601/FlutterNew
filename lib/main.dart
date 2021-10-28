@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/cart/provider/cart.dart';
-import 'package:flutter_app/pages/splash_page.dart';
-import 'package:flutter_app/themes/color.dart';
 import 'package:provider/provider.dart';
+import '../../pages/cart/provider/cart.dart';
+import '../../pages/splash_page.dart';
+import '../../themes/color.dart';
 
 void main() {
   runApp(

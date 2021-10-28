@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/products/models/category.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../../pages/products/models/category.dart';
+import '../../../themes/color.dart';
 
 class ListCategory extends StatefulWidget {
   const ListCategory({Key? key}) : super(key: key);

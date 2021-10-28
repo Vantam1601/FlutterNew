@@ -1,4 +1,4 @@
-import 'package:flutter_app/localization/app_localization.dart';
+import '../../localization/app_localization.dart';
 
 const String APP_TITLE = 'SHOP UI';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/cart/provider/cart.dart';
-import 'package:flutter_app/pages/products/models/product.dart';
-// import 'package:flutter_app/pages/products/models/product.dart';
-import 'package:flutter_app/pages/products/widgets/appbar.dart';
-import 'package:flutter_app/pages/products/widgets/list_category.dart';
-import 'package:flutter_app/widgets/cart_item.dart';
-// import 'package:flutter_app/widgets/cart_item.dart';
+import '../../pages/cart/provider/cart.dart';
+import '../../pages/products/models/product.dart';
+// import '../../pages/products/models/product.dart';
+import '../../pages/products/widgets/appbar.dart';
+import '../../pages/products/widgets/list_category.dart';
+import '../../widgets/cart_item.dart';
+// import '../../widgets/cart_item.dart';
 import 'package:provider/provider.dart';
 
 class ListProduct extends StatelessWidget {

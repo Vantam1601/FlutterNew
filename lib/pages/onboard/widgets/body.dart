@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/get_started.dart';
-import 'package:flutter_app/pages/onboard/widgets/onboard_content.dart';
-import 'package:flutter_app/pages/root_app.dart';
-import 'package:flutter_app/themes/color.dart';
-import 'package:flutter_app/widgets/button_style.dart';
+import '../../../data/get_started.dart';
+import '../../../pages/onboard/widgets/onboard_content.dart';
+import '../../../pages/root_app.dart';
+import '../../../themes/color.dart';
+import '../../../widgets/button_style.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

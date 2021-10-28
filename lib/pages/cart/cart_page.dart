@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/cart/provider/cart.dart';
-import 'package:flutter_app/themes/color.dart';
+import '../../pages/cart/provider/cart.dart';
+import '../../themes/color.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatefulWidget {
