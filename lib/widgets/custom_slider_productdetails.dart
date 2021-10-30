@@ -47,6 +47,7 @@ class _CustomeCarouselProductState extends State<CustomeCarouselProduct> {
                               image: NetworkImage(item),
                               fit: BoxFit.cover,
                             ),
+
                           ),
                           Container(
                             width: MediaQuery
@@ -55,6 +56,16 @@ class _CustomeCarouselProductState extends State<CustomeCarouselProduct> {
                                 .width,
                             color: Colors.black.withOpacity(0.2),
                           ),
+                           Column(
+                             mainAxisAlignment: MainAxisAlignment.end,
+                             children: [
+                               Row(
+                                   crossAxisAlignment: CrossAxisAlignment.center,
+                                   mainAxisAlignment: MainAxisAlignment.center,
+                                  children: List.generate(widget.items!.length, (index) =>buidDot(index))
+                                ),
+                             ],
+                           ),
                         ],
                       );
                     },
@@ -62,19 +73,7 @@ class _CustomeCarouselProductState extends State<CustomeCarouselProduct> {
                 }).toList(),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Positioned(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: List.generate(widget.items!.length, (index) =>buidDot(index))),
-                  ),
-                ],
-              ),
-            )
+
           ],
         ),
       ],
