@@ -103,7 +103,7 @@ class Actions extends StatelessWidget {
             if (state is TimerRunComplete) ...[
               FloatingActionButton(
                 child: Icon(Icons.replay),
-                onPressed: () => context.read<TimerBloc>().add(TimerReset()),
+                onPressed: () => context.watch<TimerBloc>().add(TimerReset()),
               ),
             ]
           ],
